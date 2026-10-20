@@ -72,7 +72,7 @@
     <string name="terminal_desc">সাধারণ টার্মিনাল সেটিংস</string>
     <string name="unknown_error">অজানা error</string>
     <string name="install_failed">Install ব্যর্থ হয়েছে</string>
-    <string name="about_desc">Xed-Editor সম্পর্কে</string>
+    <string name="about_desc">LarikCode সম্পর্কে</string>
     <string name="github_desc">GitHub এ স্টার করুন 🤩</string>
     <string name="telegram">টেলিগ্রাম গ্রুপ</string>
     <string name="click_open">ফাইল খোলার জন্য ক্লিক করুন</string>
@@ -115,10 +115,10 @@
     <string name="no_themes">কোনো থিম পাওয়া যায়নি।</string>
     <string name="no_icon_packs">কোন আইকন প্যাক পাওয়া যায়নি।</string>
     <string name="loading">লোডিং…</string>
-    <string name="info_ext">এক্সটেনশন ব্যবহার করে Xed-Editor এর আচার ও ব্যবহার পরিবর্তন করা যেতে পারে। একটি এক্সটেনশন কিভাবে তৈরি করা যায়, জানার জন্য এখানে ক্লিক করুন।</string>
+    <string name="info_ext">এক্সটেনশন ব্যবহার করে LarikCode এর আচার ও ব্যবহার পরিবর্তন করা যেতে পারে। একটি এক্সটেনশন কিভাবে তৈরি করা যায়, জানার জন্য এখানে ক্লিক করুন।</string>
     <string name="downloading">ডাউনলোড হচ্ছে…</string>
     <string name="network_err">নেটওয়ার্ক সমস্যা। দয়া করে আপনার ইন্টারনেট সংযোগ নিশ্চিত করুন।</string>
-    <string name="warning_private_dir">Xed-Editor ডিলিট করলে অথবা এর তথ্য মুছে ফেললে এই ফোল্ডারের তথ্য ডিলিট হয়ে যাবে</string>
+    <string name="warning_private_dir">LarikCode ডিলিট করলে অথবা এর তথ্য মুছে ফেললে এই ফোল্ডারের তথ্য ডিলিট হয়ে যাবে</string>
     <string name="file">ফাইল</string>
     <string name="folder">ফোল্ডার</string>
     <string name="backup">ব্যাকআপ</string>
@@ -150,7 +150,7 @@
     <string name="add_theme">থিম যোগ করুন</string>
     <string name="unsupported_feature">আপনার ডিভাইস এই সুবিধা সমর্থন করে না</string>
     <string name="confirm_exit">আপনি নিশ্চিত যে আপনি বের হতে চান?</string>
-    <string name="tab_memory_warning">এই ট্যাব খোলার জন্য পর্যাপ্ত মেমোরি নেই। খোলা হলে Xed-Editor crash করতে পারে। আপনি কি তাও এগোতে চান?</string>
+    <string name="tab_memory_warning">এই ট্যাব খোলার জন্য পর্যাপ্ত মেমোরি নেই। খোলা হলে LarikCode crash করতে পারে। আপনি কি তাও এগোতে চান?</string>
     <string name="terminal_virus_notice">কিছু কিছু ডিভাইসে, বিশেষ করে চায়না থেকে কিছু নির্দিষ্ট মডেলে, টার্মিনালে নানা প্রসেস চলমান অবস্থায় আপনি একটি সিস্টেম নিরাপত্তা সতর্কতা দেখতে পারেন (যেমন \'apt update\' বা \'apt upgrade\' এর ক্ষেত্রে)। এটি একটি মিথ্যা ইতিবাচক ফলাফল যা সত্যিকারের ভাইরাস নির্দেশ করে না।</string>
     <string name="text_mate_suggestion_desc">পূর্ব-নির্ধারিত keywords সুপারিশ করুন</string>
     <string name="install">ইনস্টল</string>

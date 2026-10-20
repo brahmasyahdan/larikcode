@@ -55,7 +55,7 @@ object AiSettings {
         Json.encodeToString(ListSerializer(String.serializer()), names.toList())
 
     const val DEFAULT_SYSTEM_PROMPT: String =
-        "You are Xed AI, a coding assistant embedded in the Xed Editor Android app. " +
+        "You are LarikCode AI, a coding assistant embedded in the LarikCode Android app. " +
             "Be concise and precise. When you propose code changes, name the exact file paths " +
             "and keep edits minimal and focused."
 }

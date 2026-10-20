@@ -45,7 +45,8 @@ object AiModelRegistry {
 object AiModelCatalog {
     fun modelsFor(providerId: String): List<AiModel> {
         val providerModels = AiProviderRegistry.find(providerId)?.models.orEmpty()
-        return (providerModels + AiModelRegistry.forProvider(providerId)).distinctBy { it.id }
+        return (providerModels + AiModelRegistry.forProvider(providerId) + FetchedModels.forProvider(providerId))
+            .distinctBy { it.id }
     }
 
     fun find(providerId: String, modelId: String): AiModel? = modelsFor(providerId).firstOrNull { it.id == modelId }

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name" translatable="false">Xed-Editor</string>
+    <string name="app_name" translatable="false">LarikCode</string>
     <string name="unsupported_content">Unsupported content</string>
     <string name="restart_required">Restart required</string>
     <string name="save">Save</string>
@@ -54,14 +54,14 @@
     <string name="open">Open</string>
     <string name="permission_denied">Permission denied</string>
     <string name="manage_storage">Manage storage</string>
-    <string name="manage_storage_reason">Xed-Editor needs access to edit files in your storage. Please allow the access in the upcoming system setting.</string>
+    <string name="manage_storage_reason">LarikCode needs access to edit files in your storage. Please allow the access in the upcoming system setting.</string>
     <string name="ok">OK</string>
     <string name="clone_repo">Clone repository</string>
     <string name="clone_repo_desc">Clone remote repository</string>
     <string name="repo_url">Repository URL</string>
     <string name="branch">Branch</string>
     <string name="private_files">Private files</string>
-    <string name="private_files_desc">Private files of Xed-Editor</string>
+    <string name="private_files_desc">Private files of LarikCode</string>
     <string name="cloning">Cloning repository…</string>
     <string name="error">Error</string>
     <string name="open_dir_desc">Open a directory via system file picker</string>
@@ -112,7 +112,7 @@
     <string name="theme_mode">Theme mode</string>
     <string name="theme_mode_desc">Change app color theme</string>
     <string name="about">About</string>
-    <string name="about_desc">About Xed-Editor</string>
+    <string name="about_desc">About LarikCode</string>
     <string name="version">Version</string>
     <string name="version_code">Version code</string>
     <string name="github" translatable="false">GitHub</string>
@@ -168,14 +168,14 @@
     <string name="no_themes">No themes found.</string>
     <string name="no_icon_packs">No icon packs found.</string>
     <string name="loading">Loading…</string>
-    <string name="info_ext">Extensions can be used to modify the behavior and features of Xed-Editor. To learn how to build an extension, click here.</string>
+    <string name="info_ext">Extensions can be used to modify the behavior and features of LarikCode. To learn how to build an extension, click here.</string>
     <string name="downloading">Downloading…</string>
     <string name="network_err">Network error. Please check that your internet connection is working properly.</string>
     <string name="disable_virtual_kbd">Disable virtual keyboard</string>
     <string name="disable_virtual_kbd_desc">Disable virtual keyboard if hardware keyboard is available</string>
     <string name="highlighting">Syntax highlighting</string>
     <string name="toggle_word_wrap">Toggle word wrap</string>
-    <string name="warning_private_dir">Content of this directory will get deleted if you clear data or delete Xed-Editor</string>
+    <string name="warning_private_dir">Content of this directory will get deleted if you clear data or delete LarikCode</string>
     <string name="file">File</string>
     <string name="folder">Folder</string>
     <string name="feature_toggles">Feature toggles</string>
@@ -217,7 +217,7 @@
     <string name="add_theme">Add theme</string>
     <string name="unsupported_feature">This feature is not supported on your device</string>
     <string name="confirm_exit">Are you sure you want to exit?</string>
-    <string name="tab_memory_warning">Not enough memory is available to open this tab. Opening it may cause Xed-Editor to crash. Do you want to continue anyway?</string>
+    <string name="tab_memory_warning">Not enough memory is available to open this tab. Opening it may cause LarikCode to crash. Do you want to continue anyway?</string>
     <string name="read_mode_desc">Enable read mode by default</string>
     <string name="acquire_wakelock">Acquire wakelock</string>
     <string name="release_wakelock">Release wakelock</string>
@@ -258,7 +258,7 @@
     <string name="strict_mode">Strict mode</string>
     <string name="strict_mode_desc">Detect disk or network access on the main thread</string>
     <string name="anr_watchdog">ANR Watchdog</string>
-    <string name="anr_watchdog_desc">Terminate Xed-Editor if it becomes unresponsive for more than 5 seconds</string>
+    <string name="anr_watchdog_desc">Terminate LarikCode if it becomes unresponsive for more than 5 seconds</string>
     <string name="verbose_errors">Verbose errors</string>
     <string name="verbose_errors_desc">Include stacktrace in error dialogs</string>
     <string name="enable_logcat">Enable Logcat</string>
@@ -374,8 +374,8 @@
     <string name="line_number">Line number</string>
     <string name="search_file_folder">Search files in project</string>
     <string name="search_code">Search code in project</string>
-    <string name="incompatible_theme_warning">This theme is not compatible with your current version of Xed-Editor. Would you like to proceed anyway?</string>
-    <string name="incompatible_icon_pack_warning">This icon pack is not compatible with your current version of Xed-Editor. Would you like to proceed anyway?</string>
+    <string name="incompatible_theme_warning">This theme is not compatible with your current version of LarikCode. Would you like to proceed anyway?</string>
+    <string name="incompatible_icon_pack_warning">This icon pack is not compatible with your current version of LarikCode. Would you like to proceed anyway?</string>
     <string name="theme_install_failed">Theme installation failed</string>
     <string name="theme_id_missing">JSON file does not specify a valid theme ID. Please add one and try again.</string>
     <string name="theme_name_missing">JSON file does not specify a valid theme name. Please add one and try again.</string>
@@ -415,7 +415,7 @@
     <string name="ctrl">Ctrl</string>
     <string name="alt">Alt</string>
     <string name="shift">Shift</string>
-    <string name="keybinds_info">Xed-Editor supports hardware keyboard shortcuts to help you work faster and more efficiently. A wide set of default keybindings is already available and you can configure them below to your liking.</string>
+    <string name="keybinds_info">LarikCode supports hardware keyboard shortcuts to help you work faster and more efficiently. A wide set of default keybindings is already available and you can configure them below to your liking.</string>
     <string name="reset_all">Reset all</string>
     <string name="search_keybinds">Search commands or keybindings</string>
     <string name="transform_lowercase">Transform to lowercase</string>
@@ -458,8 +458,8 @@
     <string name="extra_key_bg">Extra key background</string>
     <string name="extra_key_bg_desc">Show background for extra keys</string>
     <string name="actions">Actions</string>
-    <string name="enjoying_xed">Enjoying Xed-Editor?</string>
-    <string name="support_message">You\'ve saved %s files and run code %s times with Xed. \n\nXed is an open-source, privacy-focused app built with the help of contributors from the community. If Xed has made your coding easier, would you consider supporting its development?\n\nYour support helps me:\n• Build features faster\n• Keep Xed ad-free forever\n• Respond to bugs quickly</string>
+    <string name="enjoying_xed">Enjoying LarikCode?</string>
+    <string name="support_message">You\'ve saved %s files and run code %s times with LarikCode. \n\nLarikCode is an open-source, privacy-focused app built with the help of contributors from the community. If LarikCode has made your coding easier, would you consider supporting its development?\n\nYour support helps me:\n• Build features faster\n• Keep LarikCode ad-free forever\n• Respond to bugs quickly</string>
     <string name="yes_support">Yes, I\'ll support! ❤️</string>
     <string name="not_for_me">No thanks</string>
     <string name="sponsor_desc">Become a sponsor and help shape the future of this project</string>
@@ -522,8 +522,8 @@
     <string name="icon_pack_install_failed">Icon pack installation failed</string>
     <string name="manifest_missing_fields">The manifest.json file has missing or invalid properties:\n%s\n\nPlease check the file and try again.</string>
     <string name="manifest_missing">The manifest.json file is missing. Please add it and try again.</string>
-    <string name="outdated_extension">This extension was made for an older version of Xed-Editor. Please ask the developer for an update.</string>
-    <string name="outdated_client">Your Xed-Editor is out of date. Please update to the latest version to use this extension.</string>
+    <string name="outdated_extension">This extension was made for an older version of LarikCode. Please ask the developer for an update.</string>
+    <string name="outdated_client">Your LarikCode is out of date. Please update to the latest version to use this extension.</string>
     <string name="extension_validation_failed">Extension validation failed</string>
     <string name="general">General</string>
     <string name="advanced">Advanced</string>
@@ -768,7 +768,7 @@
     <string name="uninstall_icon_pack_dialog">Uninstall icon pack?</string>
     <string name="uninstall_icon_pack_dialog_desc">Are you sure you want to uninstall the icon pack \'%s\'?</string>
     <string name="preview">Preview</string>
-    <string name="xed_package">Xed package</string>
+    <string name="xed_package">LarikCode package</string>
     <string name="migrating_themes">Migrating themes…</string>
     <string name="checkout">Checkout</string>
     <string name="merge">Merge</string>
@@ -806,8 +806,8 @@
     <string name="finished">Finished</string>
     <string name="collapse">Collapse</string>
     <string name="expand">Expand</string>
-    <string name="package_format_error">Xed-Editor only supports installing .zip, .iconpack or .xed packages.</string>
-    <string name="theme_format_error">Xed-Editor no longer supports installing legacy single-file JSON themes. If this is your theme, please update it according to the current theme template and try again.</string>
+    <string name="package_format_error">LarikCode only supports installing .zip, .iconpack or .xed packages.</string>
+    <string name="theme_format_error">LarikCode no longer supports installing legacy single-file JSON themes. If this is your theme, please update it according to the current theme template and try again.</string>
     <string name="unknown_package_format">Could not determine package type.</string>
     <string name="no_reviews">No reviews</string>
     <string name="command_palette_swipe_hint">Tip: You can also open the command palette by swiping down from the toolbar!</string>
@@ -815,7 +815,7 @@
     <string name="ai_chat_label">Chat</string>
     <string name="ai_settings_description">Chat model, API key and tool permissions</string>
     <string name="ai_chat_command_label">AI chat</string>
-    <string name="ai_chat_title">Xed AI</string>
+    <string name="ai_chat_title">LarikCode AI</string>
     <string name="ai_empty_state_hint">Ask about this project. I can read files, edit them, search the code and run shell commands.</string>
     <string name="ai_suggestion_explain_title">Explain this project</string>
     <string name="ai_suggestion_explain_subtitle">Summarise the structure and the key files</string>
@@ -836,7 +836,7 @@
     <string name="ai_allow_tool">Allow this tool?</string>
     <string name="ai_deny">Deny</string>
     <string name="ai_allow">Allow</string>
-    <string name="ai_composer_hint">Ask Xed AI…</string>
+    <string name="ai_composer_hint">Ask LarikCode AI…</string>
     <string name="ai_send">Send</string>
     <string name="ai_status_awaiting_approval">awaiting approval</string>
     <string name="ai_status_waiting_for_you">waiting for you</string>
@@ -951,6 +951,27 @@
     <string name="ai_tool_forget_memory">Forget memory</string>
     <string name="ai_tool_index">Index</string>
     <string name="ai_tool_scratchpad">Scratch pad</string>
+    <string name="ai_add_custom_provider">Add custom provider</string>
+    <string name="ai_add_custom_provider_desc">Any OpenAI-compatible API: OpenRouter, Together, LM Studio, a self-hosted gateway…</string>
+    <string name="ai_edit_custom_provider">Edit custom provider</string>
+    <string name="ai_delete_custom_provider">Delete custom provider</string>
+    <string name="ai_delete_custom_provider_confirm">Delete \"%s\" and its saved API key?</string>
+    <string name="ai_provider_name">Provider name</string>
+    <string name="ai_base_url">Base URL</string>
+    <string name="ai_base_url_hint">e.g. https://openrouter.ai/api/v1</string>
+    <string name="ai_base_url_invalid">Enter a full http:// or https:// URL</string>
+    <string name="ai_api_key_optional">API key (optional)</string>
+    <string name="ai_models_list">Models (optional)</string>
+    <string name="ai_models_list_hint">One model id per line or comma separated. You can also fetch them later.</string>
+    <string name="ai_endpoint">Endpoint</string>
+    <string name="ai_fetch_models">Fetch models from provider</string>
+    <string name="ai_fetch_models_desc">Load the model list from the provider\'s /models endpoint</string>
+    <string name="ai_fetch_models_count">%d models loaded from provider · tap to refresh</string>
+    <string name="ai_fetching_models">Fetching models…</string>
+    <string name="ai_fetch_models_success">Loaded %d models</string>
+    <string name="ai_fetch_models_failed">Could not fetch models: %s</string>
+    <string name="ai_search_models">Search models</string>
+    <string name="ai_no_models_match">No models match. Type the id below to use it anyway.</string>
     <string name="browse_project">Browse project</string>
     <string name="no_suggestions">No suggestions</string>
     <string name="suggestions">Suggestions</string>

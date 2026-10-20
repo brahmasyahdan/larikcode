@@ -54,7 +54,7 @@
     <string name="ok">OKE</string>
     <string name="clone_repo">Clone repositori</string>
     <string name="private_files">File pribadi</string>
-    <string name="private_files_desc">File pribadi Xed-Editor</string>
+    <string name="private_files_desc">File pribadi LarikCode</string>
     <string name="cloning">Cloning repositori…</string>
     <string name="error">Terjadi kesalahan</string>
     <string name="open_dir_desc">Buka direktori melalui pemilih file sistem</string>
@@ -96,7 +96,7 @@
     <string name="theme_mode_desc">Ubah tema warna aplikasi</string>
     <string name="show_suggestions">Tampilkan saran keyboard</string>
     <string name="about">Tentang</string>
-    <string name="about_desc">Tentang Xed-Editor</string>
+    <string name="about_desc">Tentang LarikCode</string>
     <string name="version">Versi</string>
     <string name="version_code">Kode versi</string>
     <string name="github_desc">Beri bintang di GitHub 🤩</string>
@@ -123,7 +123,7 @@
     <string name="encoding_warning">Mengubah pengkodean default sangat tidak disarankan, karena dapat menyebabkan kerusakan file. Sangat disarankan untuk menggunakan UTF-8 kecuali jika Anda sepenuhnya memahami implikasinya dan telah membuat cadangan yang tepat.</string>
     <string name="line_spacing">Spasi baris</string>
     <string name="drawer_lock_desc">Biarkan laci terkunci saat membuka file</string>
-    <string name="manage_storage_reason">Xed-Editor memerlukan akses untuk mengedit file di penyimpanan Anda. Harap izinkan akses di pengaturan sistem berikutnya.</string>
+    <string name="manage_storage_reason">LarikCode memerlukan akses untuk mengedit file di penyimpanan Anda. Harap izinkan akses di pengaturan sistem berikutnya.</string>
     <string name="fonts">Font</string>
     <string name="default_encoding">Pengkodean default</string>
     <string name="show_line_number">Tampilkan nomor baris</string>
@@ -149,10 +149,10 @@
     <string name="loading">Memuat…</string>
     <string name="downloading">Mengunduh…</string>
     <string name="network_err">Kesalahan jaringan. Harap periksa apakah koneksi internet Anda berfungsi dengan baik.</string>
-    <string name="info_ext">Ekstensi dapat digunakan untuk mengubah perilaku dan fitur Xed-Editor. Untuk mempelajari cara membuat ekstensi, klik di sini.</string>
+    <string name="info_ext">Ekstensi dapat digunakan untuk mengubah perilaku dan fitur LarikCode. Untuk mempelajari cara membuat ekstensi, klik di sini.</string>
     <string name="highlighting">Sorotan sintaksis</string>
     <string name="toggle_word_wrap">Alihkan bungkus kata</string>
-    <string name="warning_private_dir">Konten direktori ini akan dihapus jika Anda menghapus data atau menghapus Xed-Editor</string>
+    <string name="warning_private_dir">Konten direktori ini akan dihapus jika Anda menghapus data atau menghapus LarikCode</string>
     <string name="folder">Folder</string>
     <string name="support_desc">Dukung pengembang</string>
     <string name="feature_toggles">Pengalih fitur</string>
@@ -195,7 +195,7 @@
     <string name="add_theme">Tambah tema</string>
     <string name="unsupported_feature">Fitur ini tidak didukung di perangkat Anda</string>
     <string name="confirm_exit">Apakah Anda yakin ingin keluar?</string>
-    <string name="tab_memory_warning">Memori tidak cukup untuk membuka tab ini. Membukanya dapat menyebabkan Xed-Editor crash. Apakah Anda tetap ingin melanjutkan?</string>
+    <string name="tab_memory_warning">Memori tidak cukup untuk membuka tab ini. Membukanya dapat menyebabkan LarikCode crash. Apakah Anda tetap ingin melanjutkan?</string>
     <string name="read_mode_desc">Aktifkan mode baca secara default</string>
     <string name="acquire_wakelock">Dapatkan wakelock</string>
     <string name="release_wakelock">Lepaskan wakelock</string>
@@ -230,7 +230,7 @@
     <string name="strict_mode">Mode ketat</string>
     <string name="strict_mode_desc">Deteksi akses disk atau jaringan pada thread utama</string>
     <string name="anr_watchdog">Watchdog ANR</string>
-    <string name="anr_watchdog_desc">Hentikan Xed-Editor jika tidak merespons selama lebih dari 5 detik</string>
+    <string name="anr_watchdog_desc">Hentikan LarikCode jika tidak merespons selama lebih dari 5 detik</string>
     <string name="verbose_errors">Kesalahan panjang (verbose)</string>
     <string name="verbose_errors_desc">Sertakan stacktrace dalam dialog kesalahan</string>
     <string name="unsupported_file_ext">Ekstensi file tidak didukung</string>
@@ -337,7 +337,7 @@
     <string name="line_number">Nomor baris</string>
     <string name="search_file_folder">Cari file dalam proyek</string>
     <string name="search_code">Cari kode dalam proyek</string>
-    <string name="incompatible_theme_warning">Tema ini tidak kompatibel dengan versi Xed-Editor Anda saat ini. Apakah Anda ingin melanjutkan?</string>
+    <string name="incompatible_theme_warning">Tema ini tidak kompatibel dengan versi LarikCode Anda saat ini. Apakah Anda ingin melanjutkan?</string>
     <string name="theme_install_failed">Instalasi tema gagal</string>
     <string name="theme_id_missing">File JSON tidak menentukan ID tema yang valid. Silakan tambahkan satu dan coba lagi.</string>
     <string name="theme_name_missing">File JSON tidak menentukan nama tema yang valid. Silakan tambahkan satu dan coba lagi.</string>
@@ -376,7 +376,7 @@
     <string name="ctrl">Ctrl</string>
     <string name="alt">Alt</string>
     <string name="shift">Shift</string>
-    <string name="keybinds_info">Xed-Editor mendukung pintasan keyboard perangkat keras untuk membantu Anda bekerja lebih cepat dan lebih efisien. Sekumpulan besar tombol pintas default sudah tersedia dan Anda dapat mengkonfigurasinya di bawah ini sesuai keinginan Anda.</string>
+    <string name="keybinds_info">LarikCode mendukung pintasan keyboard perangkat keras untuk membantu Anda bekerja lebih cepat dan lebih efisien. Sekumpulan besar tombol pintas default sudah tersedia dan Anda dapat mengkonfigurasinya di bawah ini sesuai keinginan Anda.</string>
     <string name="reset_all">Atur ulang semua</string>
     <string name="search_keybinds">Cari perintah atau tombol pintas</string>
     <string name="transform_lowercase">Ubah ke huruf kecil</string>
@@ -389,8 +389,8 @@
     <string name="extra_key_bg">Latar belakang tombol tambahan</string>
     <string name="extra_key_bg_desc">Tampilkan latar belakang untuk tombol tambahan</string>
     <string name="actions">Tindakan</string>
-    <string name="enjoying_xed">Menikmati Xed-Editor?</string>
-    <string name="support_message">Anda telah menyimpan %s file dan menjalankan kode %s kali dengan Xed. \n\nXed adalah aplikasi sumber terbuka, berfokus pada privasi yang dibangun dengan bantuan para kontributor dari komunitas. Jika Xed membuat pengkodean Anda lebih mudah, maukah Anda mempertimbangkan untuk mendukung pengembangannya?\n\nDukungan Anda membantu saya:\n• Membangun fitur lebih cepat\n• Mempertahankan Xed bebas iklan selamanya\n• Merespons bug dengan cepat</string>
+    <string name="enjoying_xed">Menikmati LarikCode?</string>
+    <string name="support_message">Anda telah menyimpan %s file dan menjalankan kode %s kali dengan LarikCode. \n\nLarikCode adalah aplikasi sumber terbuka, berfokus pada privasi yang dibangun dengan bantuan para kontributor dari komunitas. Jika LarikCode membuat pengkodean Anda lebih mudah, maukah Anda mempertimbangkan untuk mendukung pengembangannya?\n\nDukungan Anda membantu saya:\n• Membangun fitur lebih cepat\n• Mempertahankan LarikCode bebas iklan selamanya\n• Merespons bug dengan cepat</string>
     <string name="yes_support">Ya, saya akan dukung! ❤️</string>
     <string name="not_for_me">Tidak, terima kasih</string>
     <string name="sponsor_desc">Menjadi sponsor dan bantu bentuk masa depan proyek ini</string>
@@ -456,8 +456,8 @@
     <string name="icon_pack_install_failed">Gagal menginstal paket ikon</string>
     <string name="icon_pack_missing_fields">File manifest.json memiliki properti yang hilang atau tidak valid:\n%s.\n\nSilakan periksa file dan coba lagi.</string>
     <string name="manifest_missing">File manifest.json tidak ada. Silakan tambahkan dan coba lagi.</string>
-    <string name="outdated_extension">Ekstensi ini dibuat untuk versi Xed-Editor yang lebih lama. Silakan minta pengembang untuk pembaruan.</string>
-    <string name="outdated_client">Xed-Editor Anda sudah usang. Harap perbarui ke versi terbaru untuk menggunakan ekstensi ini.</string>
+    <string name="outdated_extension">Ekstensi ini dibuat untuk versi LarikCode yang lebih lama. Silakan minta pengembang untuk pembaruan.</string>
+    <string name="outdated_client">LarikCode Anda sudah usang. Harap perbarui ke versi terbaru untuk menggunakan ekstensi ini.</string>
     <string name="extension_validation_failed">Pemeriksaan ekstensi gagal</string>
     <string name="general">Umum</string>
     <string name="advanced">Lanjutan</string>
@@ -726,7 +726,7 @@
     <string name="discard_changes">Buang perubahan</string>
     <string name="discard_changes_msg">Apakah Anda yakin ingin membuang perubahan lokal pada \'%s\'? Ini tidak dapat dibatalkan.</string>
     <string name="discard_failed">Gagal membuang: %s</string>
-    <string name="incompatible_icon_pack_warning">Paket ikon ini tidak kompatibel dengan versi Xed-Editor Anda saat ini. Apakah Anda ingin melanjutkan?</string>
+    <string name="incompatible_icon_pack_warning">Paket ikon ini tidak kompatibel dengan versi LarikCode Anda saat ini. Apakah Anda ingin melanjutkan?</string>
     <string name="session_name_exists">Nama sesi sudah ada</string>
     <string name="rename_session">Ganti nama sesi</string>
     <string name="searching_in">Mencari di: %s</string>
@@ -752,7 +752,7 @@
     <string name="uninstall_icon_pack_dialog">Copot pemasangan paket ikon?</string>
     <string name="uninstall_icon_pack_dialog_desc">Apakah Anda yakin ingin mencopot pemasangan paket ikon \'%s\'?</string>
     <string name="preview">Pratinjau</string>
-    <string name="xed_package">Paket Xed</string>
+    <string name="xed_package">Paket LarikCode</string>
     <string name="migrating_themes">Memigrasikan tema…</string>
     <string name="format_document_lsp">Format dokumen dengan LSP</string>
     <string name="git_init">Inisialisasi repositori</string>
@@ -801,8 +801,8 @@
     <string name="finished">Selesai</string>
     <string name="collapse">Ciutkan</string>
     <string name="expand">Perluas</string>
-    <string name="package_format_error">Xed-Editor hanya mendukung pemasangan paket .zip, .iconpack atau .xed.</string>
-    <string name="theme_format_error">Xed-Editor tidak lagi mendukung pemasangan tema JSON file tunggal lama. Jika ini adalah tema Anda, perbarui sesuai dengan templat tema saat ini dan coba lagi.</string>
+    <string name="package_format_error">LarikCode hanya mendukung pemasangan paket .zip, .iconpack atau .xed.</string>
+    <string name="theme_format_error">LarikCode tidak lagi mendukung pemasangan tema JSON file tunggal lama. Jika ini adalah tema Anda, perbarui sesuai dengan templat tema saat ini dan coba lagi.</string>
     <string name="unknown_package_format">Tidak dapat menentukan tipe paket.</string>
     <string name="no_reviews">Tidak ada ulasan</string>
     <string name="command_palette_swipe_hint">Tips: Anda juga dapat membuka palet perintah dengan menggeser ke bawah dari bilah alat!</string>
@@ -810,7 +810,7 @@
     <string name="ai_feature_label">AI</string>
     <string name="ai_settings_description">Model obrolan, kunci API, dan izin alat</string>
     <string name="ai_chat_command_label">Obrolan AI</string>
-    <string name="ai_chat_title">Xed AI</string>
+    <string name="ai_chat_title">LarikCode AI</string>
     <string name="ai_empty_state_hint">Tanyakan tentang proyek ini. Saya dapat membaca file, mengeditnya, mencari kode, dan menjalankan perintah shell.</string>
     <string name="ai_suggestion_explain_title">Jelaskan proyek ini</string>
     <string name="ai_suggestion_explain_subtitle">Rangkum struktur dan file utama</string>
@@ -831,7 +831,7 @@
     <string name="ai_allow_tool">Izinkan alat ini?</string>
     <string name="ai_deny">Tolak</string>
     <string name="ai_allow">Izinkan</string>
-    <string name="ai_composer_hint">Tanya Xed AI…</string>
+    <string name="ai_composer_hint">Tanya LarikCode AI…</string>
     <string name="ai_send">Kirim</string>
     <string name="ai_status_awaiting_approval">menunggu persetujuan</string>
     <string name="ai_status_waiting_for_you">menunggu Anda</string>
@@ -945,4 +945,25 @@
     <string name="ai_tool_forget_memory">Lupakan memori</string>
     <string name="ai_tool_index">Indeks</string>
     <string name="ai_tool_scratchpad">Buku coretan</string>
+    <string name="ai_add_custom_provider">Tambah provider kustom</string>
+    <string name="ai_add_custom_provider_desc">API apa pun yang kompatibel OpenAI: OpenRouter, Together, LM Studio, gateway sendiri…</string>
+    <string name="ai_edit_custom_provider">Edit provider kustom</string>
+    <string name="ai_delete_custom_provider">Hapus provider kustom</string>
+    <string name="ai_delete_custom_provider_confirm">Hapus \"%s\" beserta API key yang tersimpan?</string>
+    <string name="ai_provider_name">Nama provider</string>
+    <string name="ai_base_url">Base URL</string>
+    <string name="ai_base_url_hint">contoh: https://openrouter.ai/api/v1</string>
+    <string name="ai_base_url_invalid">Masukkan URL lengkap diawali http:// atau https://</string>
+    <string name="ai_api_key_optional">API key (opsional)</string>
+    <string name="ai_models_list">Model (opsional)</string>
+    <string name="ai_models_list_hint">Satu id model per baris atau pisahkan dengan koma. Bisa juga diambil otomatis nanti.</string>
+    <string name="ai_endpoint">Endpoint</string>
+    <string name="ai_fetch_models">Ambil daftar model dari provider</string>
+    <string name="ai_fetch_models_desc">Muat daftar model dari endpoint /models milik provider</string>
+    <string name="ai_fetch_models_count">%d model dimuat dari provider · ketuk untuk memperbarui</string>
+    <string name="ai_fetching_models">Mengambil daftar model…</string>
+    <string name="ai_fetch_models_success">%d model berhasil dimuat</string>
+    <string name="ai_fetch_models_failed">Gagal mengambil daftar model: %s</string>
+    <string name="ai_search_models">Cari model</string>
+    <string name="ai_no_models_match">Tidak ada model yang cocok. Ketik id-nya di bawah untuk tetap memakainya.</string>
 </resources>

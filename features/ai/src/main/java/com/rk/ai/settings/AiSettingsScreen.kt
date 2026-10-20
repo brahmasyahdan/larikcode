@@ -2,15 +2,24 @@ package com.rk.ai.settings
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.text.KeyboardOptions
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.KeyboardArrowDown
+import androidx.compose.material.icons.filled.Search
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.DropdownMenu
 import androidx.compose.material3.DropdownMenuItem
@@ -26,20 +35,29 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.unit.dp
 import com.rk.ai.api.AiExtensions
+import com.rk.ai.provider.AiModel
 import com.rk.ai.provider.AiModelCatalog
 import com.rk.ai.provider.AiProvider
+import com.rk.ai.provider.AiProviderRegistry
 import com.rk.ai.provider.AiProviderRuntime
+import com.rk.ai.provider.CustomAiProvider
+import com.rk.ai.provider.CustomAiProviders
+import com.rk.ai.provider.CustomProviderSpec
+import com.rk.ai.provider.FetchedModels
+import com.rk.ai.provider.OpenAiCompatibleProvider
+import com.rk.ai.provider.OpenAiEndpoint
 import com.rk.ai.tools.AiTool
 import com.rk.components.NextScreenCard
-import com.rk.components.PreferenceList
 import com.rk.components.SettingsItem
 import com.rk.components.SingleInputDialog
 import com.rk.components.compose.preferences.base.PreferenceGroup
@@ -47,11 +65,18 @@ import com.rk.components.compose.preferences.base.PreferenceLayout
 import com.rk.components.compose.preferences.base.PreferenceTemplate
 import com.rk.resources.getString
 import com.rk.resources.strings
+import com.rk.utils.toast
+import kotlinx.coroutines.launch
 
 @Composable
 fun AiSettingsScreen(modifier: Modifier = Modifier, onOpenMemory: () -> Unit = {}) {
     var editing by remember { mutableStateOf<EditTarget?>(null) }
     var providerMenuOpen by remember { mutableStateOf(false) }
+    var customDialog by remember { mutableStateOf<CustomProviderSpec?>(null) }
+    var deleting by remember { mutableStateOf<CustomAiProvider?>(null) }
+    var pickingModel by remember { mutableStateOf(false) }
+    var fetchingModels by remember { mutableStateOf(false) }
+    val scope = rememberCoroutineScope()
 
     val providers by AiExtensions.providers.collectAsState()
     val tools by AiExtensions.tools.collectAsState()
@@ -102,28 +127,93 @@ fun AiSettingsScreen(modifier: Modifier = Modifier, onOpenMemory: () -> Unit = {
                     }
                 }
             }
+
+            if (provider is CustomAiProvider) {
+                SettingsItem(
+                    label = stringResource(strings.ai_edit_custom_provider),
+                    description = provider.apiRoot,
+                    singleLineDescription = true,
+                    showSwitch = false,
+                    sideEffect = { customDialog = provider.spec },
+                )
+                SettingsItem(
+                    label = stringResource(strings.ai_delete_custom_provider),
+                    showSwitch = false,
+                    sideEffect = { deleting = provider },
+                )
+            }
+
+            SettingsItem(
+                label = stringResource(strings.ai_add_custom_provider),
+                description = stringResource(strings.ai_add_custom_provider_desc),
+                showSwitch = false,
+                startWidget = {
+                    Icon(
+                        imageVector = Icons.Filled.Add,
+                        contentDescription = null,
+                        modifier = Modifier.padding(start = 16.dp).size(24.dp),
+                    )
+                },
+                sideEffect = { customDialog = CustomProviderSpec(CustomAiProviders.newId(), "", "", emptyList()) },
+            )
         }
 
         PreferenceGroup(heading = stringResource(strings.ai_connection)) {
-            if (provider?.requiresApiKey == true) {
+            if (provider is OpenAiCompatibleProvider && provider !is CustomAiProvider) {
                 SettingsItem(
-                    label = stringResource(strings.ai_api_key),
+                    label = stringResource(strings.ai_endpoint),
+                    description = provider.apiRoot,
+                    singleLineDescription = true,
+                    showSwitch = false,
+                )
+            }
+
+            if (provider != null) {
+                SettingsItem(
+                    label =
+                        stringResource(
+                            if (provider.requiresApiKey) strings.ai_api_key else strings.ai_api_key_optional
+                        ),
                     description = if (apiKey.isBlank()) stringResource(strings.ai_not_set) else maskKey(apiKey),
                     showSwitch = false,
                     sideEffect = { editing = EditTarget.ApiKey },
                 )
             }
 
-            val modelItems = models.map { it.id to it.displayName }
-            PreferenceList(
+            if (provider is OpenAiCompatibleProvider) {
+                val fetchedCount = FetchedModels.count(provider.id)
+                SettingsItem(
+                    label = stringResource(strings.ai_fetch_models),
+                    description =
+                        when {
+                            fetchingModels -> stringResource(strings.ai_fetching_models)
+                            fetchedCount > 0 -> stringResource(strings.ai_fetch_models_count, fetchedCount)
+                            else -> stringResource(strings.ai_fetch_models_desc)
+                        },
+                    showSwitch = false,
+                    isEnabled = !fetchingModels,
+                    sideEffect = {
+                        fetchingModels = true
+                        scope.launch {
+                            FetchedModels.refresh(provider, AiSettings.apiKey(provider.id))
+                                .onSuccess { toast(strings.ai_fetch_models_success.getString().format(it)) }
+                                .onFailure {
+                                    toast(
+                                        strings.ai_fetch_models_failed.getString().format(it.message ?: it.toString())
+                                    )
+                                }
+                            fetchingModels = false
+                        }
+                    },
+                )
+            }
+
+            SettingsItem(
                 label = stringResource(strings.ai_model),
-                description = AiSettings.modelId,
-                items = modelItems,
-                selectedItem = AiSettings.modelId,
-                showIds = true,
-                onItemSelected = { modelId -> AiSettings.modelId = modelId },
-                customInputLabel = stringResource(strings.ai_custom_model_id),
-                customInputValue = if (models.any { it.id == AiSettings.modelId }) "" else AiSettings.modelId,
+                description = AiSettings.modelId.ifBlank { stringResource(strings.ai_not_set) },
+                singleLineDescription = true,
+                showSwitch = false,
+                sideEffect = { pickingModel = true },
             )
         }
 
@@ -218,12 +308,219 @@ fun AiSettingsScreen(modifier: Modifier = Modifier, onOpenMemory: () -> Unit = {
 
         null -> Unit
     }
+
+    customDialog?.let { spec ->
+        CustomProviderDialog(
+            initial = spec,
+            initialApiKey = AiSettings.apiKey(spec.id),
+            onDismiss = { customDialog = null },
+            onSave = { saved, key ->
+                val isNew = CustomAiProviders.specs.none { it.id == saved.id }
+                CustomAiProviders.save(saved)
+                AiSettings.setApiKey(saved.id, key)
+                if (isNew) AiProviderRegistry.find(saved.id)?.let(::selectProvider)
+                customDialog = null
+            },
+        )
+    }
+
+    deleting?.let { target ->
+        AlertDialog(
+            onDismissRequest = { deleting = null },
+            title = { Text(stringResource(strings.ai_delete_custom_provider)) },
+            text = { Text(stringResource(strings.ai_delete_custom_provider_confirm, target.displayName)) },
+            confirmButton = {
+                TextButton(
+                    onClick = {
+                        CustomAiProviders.remove(target.id)
+                        AiProviderRegistry.providers.value.firstOrNull()?.let(::selectProvider)
+                        deleting = null
+                    }
+                ) {
+                    Text(stringResource(strings.delete))
+                }
+            },
+            dismissButton = { TextButton(onClick = { deleting = null }) { Text(stringResource(strings.cancel)) } },
+        )
+    }
+
+    if (pickingModel) {
+        ModelPickerDialog(
+            models = models,
+            selected = AiSettings.modelId,
+            onDismiss = { pickingModel = false },
+            onSelect = { modelId ->
+                AiSettings.modelId = modelId
+                AiProviderRuntime.invalidate()
+                pickingModel = false
+            },
+        )
+    }
 }
 
 private fun selectProvider(provider: AiProvider) {
     AiSettings.providerId = provider.id
-    AiModelCatalog.defaultFor(provider)?.let { AiSettings.modelId = it.id }
+    AiSettings.modelId = AiModelCatalog.defaultFor(provider)?.id.orEmpty()
     AiProviderRuntime.invalidate()
+}
+
+@Composable
+private fun CustomProviderDialog(
+    initial: CustomProviderSpec,
+    initialApiKey: String,
+    onDismiss: () -> Unit,
+    onSave: (CustomProviderSpec, String) -> Unit,
+) {
+    var name by remember { mutableStateOf(initial.name) }
+    var apiRoot by remember { mutableStateOf(initial.apiRoot) }
+    var apiKey by remember { mutableStateOf(initialApiKey) }
+    var modelsText by remember { mutableStateOf(initial.models.joinToString("\n")) }
+    val urlValid = OpenAiEndpoint.parse(apiRoot) != null && apiRoot.trim().startsWith("http")
+
+    AlertDialog(
+        onDismissRequest = onDismiss,
+        title = {
+            Text(
+                stringResource(
+                    if (initial.name.isBlank()) strings.ai_add_custom_provider else strings.ai_edit_custom_provider
+                )
+            )
+        },
+        text = {
+            Column(Modifier.verticalScroll(rememberScrollState()), verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                OutlinedTextField(
+                    value = name,
+                    onValueChange = { name = it },
+                    label = { Text(stringResource(strings.ai_provider_name)) },
+                    singleLine = true,
+                    modifier = Modifier.fillMaxWidth(),
+                )
+                OutlinedTextField(
+                    value = apiRoot,
+                    onValueChange = { apiRoot = it },
+                    label = { Text(stringResource(strings.ai_base_url)) },
+                    placeholder = { Text(stringResource(strings.ai_base_url_hint)) },
+                    isError = apiRoot.isNotBlank() && !urlValid,
+                    supportingText =
+                        if (apiRoot.isNotBlank() && !urlValid) {
+                            { Text(stringResource(strings.ai_base_url_invalid)) }
+                        } else {
+                            null
+                        },
+                    singleLine = true,
+                    keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Uri),
+                    modifier = Modifier.fillMaxWidth(),
+                )
+                OutlinedTextField(
+                    value = apiKey,
+                    onValueChange = { apiKey = it },
+                    label = { Text(stringResource(strings.ai_api_key_optional)) },
+                    singleLine = true,
+                    visualTransformation = PasswordVisualTransformation(),
+                    modifier = Modifier.fillMaxWidth(),
+                )
+                OutlinedTextField(
+                    value = modelsText,
+                    onValueChange = { modelsText = it },
+                    label = { Text(stringResource(strings.ai_models_list)) },
+                    supportingText = { Text(stringResource(strings.ai_models_list_hint)) },
+                    minLines = 2,
+                    maxLines = 6,
+                    modifier = Modifier.fillMaxWidth(),
+                )
+            }
+        },
+        confirmButton = {
+            TextButton(
+                enabled = name.isNotBlank() && urlValid,
+                onClick = {
+                    val models = modelsText.split(',', '\n').map { it.trim() }.filter { it.isNotEmpty() }.distinct()
+                    onSave(initial.copy(name = name.trim(), apiRoot = apiRoot.trim(), models = models), apiKey.trim())
+                },
+            ) {
+                Text(stringResource(strings.apply))
+            }
+        },
+        dismissButton = { TextButton(onClick = onDismiss) { Text(stringResource(strings.cancel)) } },
+    )
+}
+
+/** A searchable model list; providers like OpenRouter expose hundreds of models. */
+@Composable
+private fun ModelPickerDialog(
+    models: List<AiModel>,
+    selected: String,
+    onDismiss: () -> Unit,
+    onSelect: (String) -> Unit,
+) {
+    var query by remember { mutableStateOf("") }
+    var choice by remember { mutableStateOf(selected) }
+    var customId by remember { mutableStateOf(if (models.any { it.id == selected }) "" else selected) }
+    val filtered =
+        remember(query, models) {
+            val q = query.trim()
+            if (q.isEmpty()) models
+            else models.filter { it.id.contains(q, ignoreCase = true) || it.displayName.contains(q, ignoreCase = true) }
+        }
+
+    AlertDialog(
+        onDismissRequest = onDismiss,
+        title = { Text(stringResource(strings.ai_model)) },
+        text = {
+            Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                if (models.size > 8) {
+                    OutlinedTextField(
+                        value = query,
+                        onValueChange = { query = it },
+                        label = { Text(stringResource(strings.ai_search_models)) },
+                        leadingIcon = { Icon(Icons.Filled.Search, contentDescription = null) },
+                        singleLine = true,
+                        modifier = Modifier.fillMaxWidth(),
+                    )
+                }
+
+                if (filtered.isEmpty() && models.isNotEmpty()) {
+                    Text(
+                        text = stringResource(strings.ai_no_models_match),
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    )
+                }
+
+                LazyColumn(modifier = Modifier.weight(1f, fill = false).heightIn(max = 360.dp)) {
+                    items(filtered, key = { it.id }) { model ->
+                        PreferenceTemplate(
+                            modifier =
+                                Modifier.clip(MaterialTheme.shapes.large).clickable {
+                                    choice = model.id
+                                    customId = ""
+                                },
+                            title = { Text(text = model.displayName) },
+                            description = { if (model.displayName != model.id) Text(text = model.id) },
+                            startWidget = {
+                                RadioButton(selected = choice == model.id && customId.isBlank(), onClick = null)
+                            },
+                            verticalPadding = 8.dp,
+                        )
+                    }
+                }
+
+                OutlinedTextField(
+                    value = customId,
+                    onValueChange = { customId = it },
+                    label = { Text(stringResource(strings.ai_custom_model_id)) },
+                    singleLine = true,
+                    modifier = Modifier.fillMaxWidth(),
+                )
+            }
+        },
+        confirmButton = {
+            val result = customId.trim().ifEmpty { choice }
+            TextButton(enabled = result.isNotBlank(), onClick = { onSelect(result) }) {
+                Text(stringResource(strings.apply))
+            }
+        },
+        dismissButton = { TextButton(onClick = onDismiss) { Text(stringResource(strings.cancel)) } },
+    )
 }
 
 @Composable

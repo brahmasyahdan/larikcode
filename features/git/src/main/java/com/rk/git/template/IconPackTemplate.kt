@@ -39,7 +39,7 @@ object IconPackTemplate : GitTemplate(repoUrl = "https://github.com/Xed-Editor/I
 
     override val id = "xed_icon_pack"
     override val label = "Icon pack"
-    override val description = "Create a new Xed-Editor icon pack"
+    override val description = "Create a new LarikCode icon pack"
     override val icon = Icon.ResourceIcon(drawables.widgets)
     override val size: Long = 18432
 

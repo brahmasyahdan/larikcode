@@ -219,7 +219,7 @@ fun copyToClipboard(label: String, text: String, showToast: Boolean = true) {
 }
 
 fun copyToClipboard(text: String, showToast: Boolean = true) {
-    copyToClipboard(label = "Xed-Editor", text, showToast = showToast)
+    copyToClipboard(label = "LarikCode", text, showToast = showToast)
 }
 
 fun expectOOM(requiredMemBytes: Long): Boolean {

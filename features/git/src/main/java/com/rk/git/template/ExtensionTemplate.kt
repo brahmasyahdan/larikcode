@@ -46,7 +46,7 @@ object ExtensionTemplate : GitTemplate(repoUrl = "https://github.com/Xed-Editor/
 
     override val id = "xed_extension"
     override val label = "Extension"
-    override val description = "Create a new Xed-Editor extension"
+    override val description = "Create a new LarikCode extension"
     override val icon = Icon.ResourceIcon(drawables.extension)
     override val size: Long = 30797312
 

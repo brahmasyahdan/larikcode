@@ -39,7 +39,7 @@ object ThemeTemplate : GitTemplate(repoUrl = "https://github.com/Xed-Editor/Them
 
     override val id = "xed_theme"
     override val label = "Theme"
-    override val description = "Create a new Xed-Editor theme"
+    override val description = "Create a new LarikCode theme"
     override val icon = Icon.ResourceIcon(drawables.palette)
     override val size: Long = 334848
 

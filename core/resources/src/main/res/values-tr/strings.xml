@@ -51,11 +51,11 @@
     <string name="open">Aç</string>
     <string name="permission_denied">İzin reddedildi</string>
     <string name="manage_storage">Depolamayı yönet</string>
-    <string name="manage_storage_reason">Xed-Editor depolama alanınızdaki dosyaları düzenlemek için erişime ihtiyacı var. Lütfen sistem ayarından erişime izin verin.</string>
+    <string name="manage_storage_reason">LarikCode depolama alanınızdaki dosyaları düzenlemek için erişime ihtiyacı var. Lütfen sistem ayarından erişime izin verin.</string>
     <string name="ok">TAMAM</string>
     <string name="clone_repo">Klon deposu</string>
     <string name="private_files">Özel dosyalar</string>
-    <string name="private_files_desc">Xed-Editor\'ün özel dosyaları</string>
+    <string name="private_files_desc">LarikCode\'ün özel dosyaları</string>
     <string name="cloning">Klon Deposu…</string>
     <string name="error">Hata</string>
     <string name="open_dir_desc">Sistem dosya seçicisinden bir klasör aç</string>
@@ -100,7 +100,7 @@
     <string name="theme_mode_desc">Renk temasını değiştir</string>
     <string name="show_suggestions">Klavye önerilerini göster</string>
     <string name="about">Hakkında</string>
-    <string name="about_desc">Xed-Editor hakkında</string>
+    <string name="about_desc">LarikCode hakkında</string>
     <string name="version">Sürüm</string>
     <string name="version_code">Sürüm kodu</string>
     <string name="github">GitHub</string>
@@ -141,7 +141,7 @@
     <string name="support_desc">Geliştirmeyi destekle</string>
     <string name="ext_desc">Eklentileri yönet</string>
     <string name="install_from_storage">Dahili depolamadan kur</string>
-    <string name="info_ext">Eklentiler, Xed-Editor\'ün davranışını ve özelliklerini değiştirmek için kullanılabilir. Bir eklenti uzantısının nasıl oluşturulacağını öğrenmek için buraya tıklayın.</string>
+    <string name="info_ext">Eklentiler, LarikCode\'ün davranışını ve özelliklerini değiştirmek için kullanılabilir. Bir eklenti uzantısının nasıl oluşturulacağını öğrenmek için buraya tıklayın.</string>
     <string name="downloading">İndiriliyor…</string>
     <string name="warning_private_dir">Bu klasörün içeriği uygulamayı silerseniz veya verileri temizlerseniz kaybolur</string>
     <string name="feature_toggles">Özellik anahtarları</string>
@@ -174,7 +174,7 @@
     <string name="add_theme">Tema ekle</string>
     <string name="unsupported_feature">Bu özellik cihazınızda desteklenmiyor</string>
     <string name="confirm_exit">Çıkmak istediğinizden emin misiniz?</string>
-    <string name="tab_memory_warning">Bu sekmeyi açmak için yeterli bellek yok. Açılması Xed-Editor’un çökmesine neden olabilir. Yine de devam etmek istiyor musunuz?</string>
+    <string name="tab_memory_warning">Bu sekmeyi açmak için yeterli bellek yok. Açılması LarikCode’un çökmesine neden olabilir. Yine de devam etmek istiyor musunuz?</string>
     <string name="read_mode_desc">Okuma modunu varsayılan olarak etkinleştirin</string>
     <string name="disable_virtual_kbd">Sanal klavyeyi devre dışı bırak</string>
     <string name="disable_virtual_kbd_desc">Donanım klavyesi mevcutsa sanal klavyeyi devre dışı bırakın</string>
@@ -227,7 +227,7 @@
     <string name="strict_mode">Sıkı mod</string>
     <string name="strict_mode_desc">Ana iş parçacığında disk veya ağ erişimini algıla</string>
     <string name="anr_watchdog">ANR İzleyicisi</string>
-    <string name="anr_watchdog_desc">Xed-Editor 5 saniyeden uzun süre yanıt vermezse sonlandır</string>
+    <string name="anr_watchdog_desc">LarikCode 5 saniyeden uzun süre yanıt vermezse sonlandır</string>
     <string name="verbose_errors">Hata ayrıntıları</string>
     <string name="verbose_errors_desc">Hata iletişim kutularında stacktrace iznini dahil et</string>
     <string name="unsupported_file_ext">Desteklenmeyen dosya uzantısı</string>
@@ -330,7 +330,7 @@
     <string name="line_number">Satır numarası</string>
     <string name="search_file_folder">Projede dosya ara</string>
     <string name="search_code">Projede kod ara</string>
-    <string name="incompatible_theme_warning">Bu tema, Xed-Editor\'ün mevcut sürümüyle uyumlu değil. Yine de devam etmek istiyor musunuz?</string>
+    <string name="incompatible_theme_warning">Bu tema, LarikCode\'ün mevcut sürümüyle uyumlu değil. Yine de devam etmek istiyor musunuz?</string>
     <string name="theme_install_failed">Tema kurulumu başarısız oldu</string>
     <string name="theme_id_missing">JSON dosyası geçerli bir tema kimliği belirtmiyor. Lütfen bir tane ekleyip tekrar deneyin.</string>
     <string name="theme_name_missing">JSON dosyası geçerli bir tema adı belirtmiyor. Lütfen bir tane ekleyin ve tekrar deneyin.</string>
@@ -376,7 +376,7 @@
     <string name="ctrl">Ctrl</string>
     <string name="alt">Alt</string>
     <string name="shift">Shift</string>
-    <string name="keybinds_info">Xed-Editor, daha hızlı ve verimli çalışmanıza yardımcı olmak için donanım klavye kısayollarını destekler. Geniş bir varsayılan tuş atamaları seti zaten mevcuttur ve bunları aşağıda dilediğiniz gibi yapılandırabilirsiniz.</string>
+    <string name="keybinds_info">LarikCode, daha hızlı ve verimli çalışmanıza yardımcı olmak için donanım klavye kısayollarını destekler. Geniş bir varsayılan tuş atamaları seti zaten mevcuttur ve bunları aşağıda dilediğiniz gibi yapılandırabilirsiniz.</string>
     <string name="reset_all">Tümünü sıfırla</string>
     <string name="search_keybinds">Komutları veya tuş atamalarını ara</string>
     <string name="transform_lowercase">Küçük harfe dönüştür</string>
@@ -389,8 +389,8 @@
     <string name="extra_key_bg">Extra tuş arka planı</string>
     <string name="extra_key_bg_desc">Ek tuşlar için arka planı göster</string>
     <string name="actions">Eylemler</string>
-    <string name="enjoying_xed">Xed-Editor\'ü beğeniyor musun?</string>
-    <string name="support_message">Xed ile %s dosya kaydettiniz ve kodu %s kez çalıştırdınız.\n\nBen bu uygulamayı ücretsiz ve gizlilik odaklı tutan tek bir geliştiriciyim. Xed, topluluktan katkıda bulunanların yardımıyla geliştirilmiş açık kaynaklı, gizlilik odaklı bir uygulamadır. Eğer Xed kod yazmanızı kolaylaştırdıysa, gelişimini desteklemeyi düşünür müsünüz?\n\nDesteğiniz bana yardımcı olur:\n• Özellikleri daha hızlı geliştirmeme\n• Xed\'i sonsuza dek reklamsız tutmama\n• Hatalara hızlıca yanıt vermeme</string>
+    <string name="enjoying_xed">LarikCode\'ü beğeniyor musun?</string>
+    <string name="support_message">LarikCode ile %s dosya kaydettiniz ve kodu %s kez çalıştırdınız.\n\nBen bu uygulamayı ücretsiz ve gizlilik odaklı tutan tek bir geliştiriciyim. LarikCode, topluluktan katkıda bulunanların yardımıyla geliştirilmiş açık kaynaklı, gizlilik odaklı bir uygulamadır. Eğer LarikCode kod yazmanızı kolaylaştırdıysa, gelişimini desteklemeyi düşünür müsünüz?\n\nDesteğiniz bana yardımcı olur:\n• Özellikleri daha hızlı geliştirmeme\n• LarikCode\'i sonsuza dek reklamsız tutmama\n• Hatalara hızlıca yanıt vermeme</string>
     <string name="yes_support">Evet, destekleyeceğim! ❤️</string>
     <string name="not_for_me">Hayır teşekkürler</string>
     <string name="sponsor_desc">Sponsor ol ve bu projenin geleceğini şekillendirmeye yardım et</string>
@@ -456,8 +456,8 @@
     <string name="icon_pack_install_failed">İkon paketi kurulumu başarısız oldu</string>
     <string name="icon_pack_missing_fields">manifest.json dosyasında eksik veya geçersiz özellikler bulunuyor:\n%s\n\nLütfen dosyayı kontrol edin ve tekrar deneyin.</string>
     <string name="manifest_missing">manifest.json dosyası eksik. Lütfen ekleyin ve tekrar deneyin.</string>
-    <string name="outdated_extension">Bu eklenti, Xed-Editor\'ın daha eski bir sürümü için yapıldı. Lütfen geliştiriciden bir güncelleme isteyin.</string>
-    <string name="outdated_client">Xed-Editor\'ınız güncel değil. Bu eklentiyi kullanabilmek için lütfen en son sürüme güncelleyin.</string>
+    <string name="outdated_extension">Bu eklenti, LarikCode\'ın daha eski bir sürümü için yapıldı. Lütfen geliştiriciden bir güncelleme isteyin.</string>
+    <string name="outdated_client">LarikCode\'ınız güncel değil. Bu eklentiyi kullanabilmek için lütfen en son sürüme güncelleyin.</string>
     <string name="extension_validation_failed">Eklenti doğrulaması başarısız oldu</string>
     <string name="general">Genel</string>
     <string name="advanced">Gelişmiş</string>
@@ -730,7 +730,7 @@
     <string name="discard_changes">Değişiklikleri sil</string>
     <string name="discard_changes_msg">%s\'deki yerel değişikliklerinizi silmek istediğinizden emin misiniz? Bu işlem geri alınamaz.</string>
     <string name="discard_failed">Silme başarısız oldu: %s</string>
-    <string name="incompatible_icon_pack_warning">Bu simge paketi, Xed-Editor\'ın mevcut sürümünüzle uyumlu değil. Yine de devam etmek ister misiniz?</string>
+    <string name="incompatible_icon_pack_warning">Bu simge paketi, LarikCode\'ın mevcut sürümünüzle uyumlu değil. Yine de devam etmek ister misiniz?</string>
     <string name="session_name_exists">Oturum adı zaten mevcut</string>
     <string name="rename_session">Oturum adını değiştir</string>
     <string name="searching_in">Aranıyor: %s</string>
@@ -756,7 +756,7 @@
     <string name="uninstall_icon_pack_dialog">İkon paketini kaldırmak istiyor musunuz?</string>
     <string name="uninstall_icon_pack_dialog_desc">\'%s\' ikon paketini kaldırmak istediğinizden emin misiniz?</string>
     <string name="preview">Önizleme</string>
-    <string name="xed_package">Xed paketi</string>
+    <string name="xed_package">LarikCode paketi</string>
     <string name="migrating_themes">Temalar taşınıyor…</string>
     <string name="format_document_lsp">Belgeyi LSP ile biçimlendir</string>
     <string name="git_init">Repoyu başlat</string>
@@ -805,15 +805,15 @@
     <string name="finished">Bitti</string>
     <string name="collapse">Daralt</string>
     <string name="expand">Genişlet</string>
-    <string name="package_format_error">Xed-Editor sadece .zip, .iconpack veya .xed paketlerinin yüklenmesini destekler.</string>
-    <string name="theme_format_error">Xed-Editor artık eski tek dosyalı JSON temalarının yüklenmesini desteklemiyor. Eğer bu sizin temanızsa, lütfen mevcut tema şablonuna göre güncelleyin ve tekrar deneyin.</string>
+    <string name="package_format_error">LarikCode sadece .zip, .iconpack veya .xed paketlerinin yüklenmesini destekler.</string>
+    <string name="theme_format_error">LarikCode artık eski tek dosyalı JSON temalarının yüklenmesini desteklemiyor. Eğer bu sizin temanızsa, lütfen mevcut tema şablonuna göre güncelleyin ve tekrar deneyin.</string>
     <string name="unknown_package_format">Paket türü belirlenemedi.</string>
     <string name="no_reviews">Henüz yorum yok</string>
     <string name="command_palette_swipe_hint">İpucu: Komut paletini araç çubuğundan aşağı kaydırarak da açabilirsiniz!</string>
     <string name="ai_feature_label">YZ</string>
     <string name="ai_settings_description">Sohbet modeli, API anahtarı ve araç izinleri</string>
     <string name="ai_chat_command_label">YZ sohbeti</string>
-    <string name="ai_chat_title">Xed YZ</string>
+    <string name="ai_chat_title">LarikCode YZ</string>
     <string name="ai_empty_state_hint">Bu proje hakkında bilgi alın. Dosyaları okuyabilirim, onları düzenleyebilirim, kodu arayabilirim ve shell komutlarını çalıştırabilirim.</string>
     <string name="ai_suggestion_explain_title">Bu projeyi açıklayın</string>
     <string name="ai_suggestion_explain_subtitle">Yapıyı ve ana dosyaları özetleyin</string>
@@ -834,7 +834,7 @@
     <string name="ai_allow_tool">Bu araca izin verilsin mi?</string>
     <string name="ai_deny">Hayır</string>
     <string name="ai_allow">İzin ver</string>
-    <string name="ai_composer_hint">Xed YZ\'e Sor…</string>
+    <string name="ai_composer_hint">LarikCode YZ\'e Sor…</string>
     <string name="ai_send">Gönder</string>
     <string name="ai_status_awaiting_approval">Onay bekliyor</string>
     <string name="ai_status_waiting_for_you">seni bekliyorum</string>

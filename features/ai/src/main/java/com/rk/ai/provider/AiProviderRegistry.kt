@@ -59,6 +59,7 @@ object AiProviderRegistry {
             toInstall.forEach { (id, provider) -> if (!providersById.containsKey(id)) providersById[id] = provider }
             publishLocked()
         }
+        CustomAiProviders.install()
     }
 
     internal fun resetForTests() {

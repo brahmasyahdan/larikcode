@@ -53,14 +53,14 @@
     <string name="open">열기</string>
     <string name="permission_denied">권한 거부됨</string>
     <string name="manage_storage">저장공간 관리</string>
-    <string name="manage_storage_reason">Xed-Editor는 저장공간에서 파일을 수정하기 위한 권한이 필요로 합니다. 시스템 설정에서 권한을 허용해 주세요.</string>
+    <string name="manage_storage_reason">LarikCode는 저장공간에서 파일을 수정하기 위한 권한이 필요로 합니다. 시스템 설정에서 권한을 허용해 주세요.</string>
     <string name="ok">확인</string>
     <string name="clone_repo">저장소 복제하기</string>
     <string name="clone_repo_desc">원격 저장소 복제하기</string>
     <string name="repo_url">저장소 URL</string>
     <string name="branch">브렌치</string>
     <string name="private_files">전용 파일</string>
-    <string name="private_files_desc">Xed-Editor의 전용 파일</string>
+    <string name="private_files_desc">LarikCode의 전용 파일</string>
     <string name="cloning">저장소 복제 중…</string>
     <string name="error">오류</string>
     <string name="open_dir_desc">시스템 파일 선택기로 디렉터리 열기</string>
@@ -110,7 +110,7 @@
     <string name="theme_mode_desc">앱의 색 테마를 변경합니다</string>
     <string name="show_suggestions">키보드 제안 표시</string>
     <string name="about">정보</string>
-    <string name="about_desc">Xed-Editor에 대한 정보</string>
+    <string name="about_desc">LarikCode에 대한 정보</string>
     <string name="version">버전</string>
     <string name="version_code">빌드 번호</string>
     <string name="github_desc">GitHub에서 스타를 눌러주세요 🤩</string>
@@ -160,14 +160,14 @@
     <string name="install_from_storage">저장공간에서 설치</string>
     <string name="no_ext">확장 기능이 발견되지 않았습니다.</string>
     <string name="loading">불러오는 중…</string>
-    <string name="info_ext">확장 기능은 Xed-Editor의 동작 방식이나 기능을 변경하는 데에 사용될 수 있습니다. 확장 기능을 만드는 방법을 배우고 싶다면, 여기를 클릭하세요.</string>
+    <string name="info_ext">확장 기능은 LarikCode의 동작 방식이나 기능을 변경하는 데에 사용될 수 있습니다. 확장 기능을 만드는 방법을 배우고 싶다면, 여기를 클릭하세요.</string>
     <string name="downloading">다운로드 중…</string>
     <string name="network_err">네트워크 오류. 인터넷 연결이 제대로 되고 있는지 확인해주세요.</string>
     <string name="disable_virtual_kbd">가상 키보드 비활성화</string>
     <string name="disable_virtual_kbd_desc">하드웨어 키보드를 이용할 수 있는 경우, 가상 키보드를 비활성화합니다</string>
     <string name="highlighting">구문 강조</string>
     <string name="toggle_word_wrap">자동 줄바꿈 켜기/끄기</string>
-    <string name="warning_private_dir">Xed-Editor를 지울 경우, 이 디렉터리의 내용도 함께 삭제됩니다</string>
+    <string name="warning_private_dir">LarikCode를 지울 경우, 이 디렉터리의 내용도 함께 삭제됩니다</string>
     <string name="file">파일</string>
     <string name="folder">폴더</string>
     <string name="feature_toggles">기능 켜기/끄기</string>
@@ -207,7 +207,7 @@
     <string name="add_theme">테마 추가</string>
     <string name="unsupported_feature">이 기능은 이 스마트폰에서 지원하지 않습니다</string>
     <string name="confirm_exit">정말 종료하실 건가요?</string>
-    <string name="tab_memory_warning">이 탭을 열 수 있는 메모리가 충분하지 않습니다. 이대로 탭을 열 경우, Xed-Editor가 충돌할 수 있습니다. 정말 계속하실 건가요?</string>
+    <string name="tab_memory_warning">이 탭을 열 수 있는 메모리가 충분하지 않습니다. 이대로 탭을 열 경우, LarikCode가 충돌할 수 있습니다. 정말 계속하실 건가요?</string>
     <string name="read_mode_desc">읽기 모드를 기본값으로 활성화</string>
     <string name="acquire_wakelock">절전 방지 활성화</string>
     <string name="release_wakelock">절전 방지 끄기</string>
@@ -243,7 +243,7 @@
     <string name="strict_mode">엄격 모드</string>
     <string name="strict_mode_desc">메인 스레드에서 디스크 및 네트워크 접근을 감지합니다</string>
     <string name="anr_watchdog">ANR Watchdog (응답 없음 감지)</string>
-    <string name="anr_watchdog_desc">5초 이상 응답하지 않을 경우, Xed-Editor를 터뜨립니다</string>
+    <string name="anr_watchdog_desc">5초 이상 응답하지 않을 경우, LarikCode를 터뜨립니다</string>
     <string name="verbose_errors">상세 오류 표시</string>
     <string name="verbose_errors_desc">오류 대화상자에 스택 트레이스 포함</string>
     <string name="unsupported_file_ext">지원하지 않는 파일 확장자</string>
@@ -362,7 +362,7 @@
     <string name="line_number">줄 번호</string>
     <string name="search_file_folder">프로젝트에서 파일 찾기</string>
     <string name="search_code">프로젝트에서 코드 찾기</string>
-    <string name="incompatible_theme_warning">해당 테마는 이 버전의 Xed-Editor와 호환되지 않습니다. 정말 그대로 진행하시겠습니까?</string>
+    <string name="incompatible_theme_warning">해당 테마는 이 버전의 LarikCode와 호환되지 않습니다. 정말 그대로 진행하시겠습니까?</string>
     <string name="theme_install_failed">테마 설치 실패</string>
     <string name="theme_id_missing">JSON 파일에 유효한 테마 ID가 명시되지 않았습니다. 추가 후 다시 시도해 주세요.</string>
     <string name="theme_name_missing">JSON 파일에 유효한 테마 이름이 명시되지 않았습니다. 추가 후 다시 시도해 주세요.</string>
@@ -406,7 +406,7 @@
     <string name="ctrl">Ctrl</string>
     <string name="alt">Alt</string>
     <string name="shift">Shift</string>
-    <string name="keybinds_info">Xed-Editor는 더 빠르고 효율적인 작업을 위해 하드웨어 키보드 숏컷을 지원합니다. 이미 다양한 기본 키 바인딩을 이용할 수 있으며, 원하는 대로 구성할 수 있습니다.</string>
+    <string name="keybinds_info">LarikCode는 더 빠르고 효율적인 작업을 위해 하드웨어 키보드 숏컷을 지원합니다. 이미 다양한 기본 키 바인딩을 이용할 수 있으며, 원하는 대로 구성할 수 있습니다.</string>
     <string name="reset_all">전부 초기화</string>
     <string name="search_keybinds">명령어 또는 키 바인딩 검색</string>
     <string name="transform_lowercase">소문자로 변환</string>
@@ -486,8 +486,8 @@
     <string name="insert_final_newline_desc">포매팅할 때 파일이 줄바꿈 문자로 끝나도록 보장</string>
     <string name="theme_migrated">테마 %d개 이전 성공</string>
     <string name="actions">동작</string>
-    <string name="enjoying_xed">Xed-Editor를 잘 쓰고 계신가요?</string>
-    <string name="support_message">Xed에서 파일 %s개를 저장하고 코드를 %s회 실행했습니다. \n\nXed는 커뮤니티 기여자들의 도움으로 만들어 낸, 개인정보를 중시하는 오픈 소스 앱입니다. Xed가 코딩을 더 쉽게 만들어 주었다면, 개발을 지원할 의향이 있으신가요?\n\n지원하면 이렇게 도움이 돼요.\n• 기능 개발 속도 향상\n• 영원히 광고 없는 Xed 환경\n• 빠른 버그 대처</string>
+    <string name="enjoying_xed">LarikCode를 잘 쓰고 계신가요?</string>
+    <string name="support_message">LarikCode에서 파일 %s개를 저장하고 코드를 %s회 실행했습니다. \n\nLarikCode는 커뮤니티 기여자들의 도움으로 만들어 낸, 개인정보를 중시하는 오픈 소스 앱입니다. LarikCode가 코딩을 더 쉽게 만들어 주었다면, 개발을 지원할 의향이 있으신가요?\n\n지원하면 이렇게 도움이 돼요.\n• 기능 개발 속도 향상\n• 영원히 광고 없는 LarikCode 환경\n• 빠른 버그 대처</string>
     <string name="yes_support">네, 지원할게요! ❤️</string>
     <string name="not_for_me">괜찮아요</string>
     <string name="sponsor_desc">후원자가 되어 이 프로젝트의 미래를 만드는 데 도움을 주세요</string>
@@ -514,8 +514,8 @@
     <string name="enable_editorconfig_desc">.editorconfig 파일 내에서 정의한 코드 스타일 규칙을 자동으로 적용</string>
     <string name="binary_file_notice">이 파일은 바이너리 파일로 보입니다. 편집이 비활성화되었습니다</string>
     <string name="manifest_missing">manifest.json 파일이 누락되었습니다. 추가한 뒤 다시 시도해 주세요.</string>
-    <string name="outdated_extension">이 확장은 Xed-Editor의 구 버전에 맞게 만들어졌습니다. 개발자에게 업데이트를 요청하세요.</string>
-    <string name="outdated_client">오래된 Xed-Editor를 사용하고 있습니다. 이 확장을 사용하려면 최신 버전으로 업데이트하세요.</string>
+    <string name="outdated_extension">이 확장은 LarikCode의 구 버전에 맞게 만들어졌습니다. 개발자에게 업데이트를 요청하세요.</string>
+    <string name="outdated_client">오래된 LarikCode를 사용하고 있습니다. 이 확장을 사용하려면 최신 버전으로 업데이트하세요.</string>
     <string name="extension_validation_failed">확장 검증 실패</string>
     <string name="credentials">자격 증명</string>
     <string name="credentials_desc">원격 저장소에 접근하기 위한 자격 증명</string>
@@ -595,7 +595,7 @@
     <string name="supported">지원</string>
     <string name="publish_date">게시한 날짜</string>
     <string name="update_date">업데이트 날짜</string>
-    <string name="theme_format_error">Xed-Editor에서 더 이상 단일 파일 JSON 테마 설치를 지원하지 않습니다. 당신의 테마라면, 현재 테마 템플릿에 맞춰 업데이트한 뒤 다시 시도해 주세요.</string>
+    <string name="theme_format_error">LarikCode에서 더 이상 단일 파일 JSON 테마 설치를 지원하지 않습니다. 당신의 테마라면, 현재 테마 템플릿에 맞춰 업데이트한 뒤 다시 시도해 주세요.</string>
     <string name="filter_options">필터 옵션</string>
     <string name="sort_options">정렬 옵션</string>
     <string name="source_code">소스 코드</string>
@@ -686,7 +686,7 @@
     <string name="uninstall_icon_pack_dialog">아이콘 팩을 삭제합니까?</string>
     <string name="uninstall_icon_pack_dialog_desc">정말로 \'%s\' 아이콘 팩을 삭제하시겠습니까?</string>
     <string name="preview">미리보기</string>
-    <string name="xed_package">Xed 패키지</string>
+    <string name="xed_package">LarikCode 패키지</string>
     <string name="migrating_themes">테마 이전 중…</string>
     <string name="checkout">체크아웃</string>
     <string name="merge">병합</string>
@@ -753,7 +753,7 @@
     <string name="finished">완료됨</string>
     <string name="collapse">접기</string>
     <string name="expand">펼치기</string>
-    <string name="package_format_error">Xed-Editor는 .zip, .iconpack, .xed 패키지의 설치만 지원합니다.</string>
+    <string name="package_format_error">LarikCode는 .zip, .iconpack, .xed 패키지의 설치만 지원합니다.</string>
     <string name="credentials_github">GitHub에 연결하려면 GitHub 계정 비밀번호가 아니라, PAT(개인 액세스 토큰)을 입력해야 합니다.</string>
     <string name="accept_current_change">현재 변경 승인</string>
     <string name="accept_incoming_change">신규 변경 승인</string>
@@ -779,7 +779,7 @@
     <string name="signature_help">매개변수 도우미</string>
     <string name="signature_help_desc">매개변수 정보 표시</string>
     <string name="hover_information_desc">커서를 올려 문서 표시</string>
-    <string name="incompatible_icon_pack_warning">현재 버전의 Xed-Editor와는 아이콘 팩이 호환되지 않습니다. 그래도 진행하시겠습니까?</string>
+    <string name="incompatible_icon_pack_warning">현재 버전의 LarikCode와는 아이콘 팩이 호환되지 않습니다. 그래도 진행하시겠습니까?</string>
     <string name="scoped_tabs">탭 범위 구분</string>
     <string name="scoped_tabs_desc">현재 프로젝트와 관련된 탭만 표시</string>
     <string name="document_highlight">일치 항목 강조</string>
@@ -800,7 +800,7 @@
     <string name="ai_feature_label">AI</string>
     <string name="ai_settings_description">대화 모델, API 키, 도구 권한</string>
     <string name="ai_chat_command_label">AI 대화</string>
-    <string name="ai_chat_title">Xed AI</string>
+    <string name="ai_chat_title">LarikCode AI</string>
     <string name="ai_empty_state_hint">프로젝트에 대해 질문하세요. 저는 파일을 읽고, 편집하고, 코드를 검색하고, 셸 명령을 실행할 수 있어요.</string>
     <string name="ai_suggestion_explain_title">이 프로젝트 설명하기</string>
     <string name="ai_suggestion_explain_subtitle">구조와 주요 파일 요약하기</string>
@@ -821,7 +821,7 @@
     <string name="ai_allow_tool">이 도구를 허용할까요?</string>
     <string name="ai_deny">거부</string>
     <string name="ai_allow">허용</string>
-    <string name="ai_composer_hint">Xed AI에게 묻기…</string>
+    <string name="ai_composer_hint">LarikCode AI에게 묻기…</string>
     <string name="ai_send">전송</string>
     <string name="ai_status_awaiting_approval">승인 대기 중</string>
     <string name="ai_status_waiting_for_you">사용자 대기 중</string>
